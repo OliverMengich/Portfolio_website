@@ -1,0 +1,129 @@
+body{
+    background-color: rgb(6, 7, 88);
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: auto;
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+a{
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.about-me{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    transform: scale(1);
+    border-radius: 5px;
+}
+.about-me p{
+    line-height: 1.5;
+}
+.about-me img{
+    border-collapse: collapse;
+    border-radius: 10%;
+}
+h1{
+    font-size: 34px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+.about-me span{
+    color: red;
+}
+
+.experience{
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(8, 8, 114);
+}
+.education{
+    display: flex;
+    border: 3px solid black;
+}
+.experience img{
+    border-radius: 50%;
+    border-collapse: collapse;
+}
+.description{
+    margin-left: 20%;
+    max-width: 50%;
+}
+.line{
+    width: 90%;
+    height: 2px;
+    background-color: #fff;
+}
+.description h1,
+.projects h1{
+    font-family: 'Fruktur', cursive;
+    font-size: 30px;
+}
+.description p{
+    font-size: 1.2rem;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+.projects{
+    display: flex;
+    
+}
+.project{
+    max-width: 30%;
+    border: 1px solid white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-left: 5em;
+    margin-bottom: 20px;
+}
+.project:hover{
+    background-color: rgb(1, 1, 41);
+    /* padding: 20px; */
+    transform: scale(1.1);
+    transition: .5s;
+}
+.learn-more{
+    padding: 10px;
+    width: 50%;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid white;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+.skills{
+    margin: 20px;
+    display: flex;
+}
+.skills .progress-bar{
+    width: 80%;
+    height: 5px;
+    background-color: white;
+    /*  */
+}
+.skill{
+    margin: 20px;
+}
+.progress-range{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(184, 6, 160);
+}
