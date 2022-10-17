@@ -13,7 +13,8 @@
     <header class="header">
         <h1>Oliver Kipkemei</h1>
         <nav>
-            <ul>
+            <div id="hambuger" class="hambuger"><img src="images/moon.png" alt="hello"></div>
+            <ul class="toogle">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="Projects">Projects</a></li>
@@ -24,7 +25,7 @@
     <main>
         <section class="about-me">
             <img src="images/removed_bg1.png" alt="">
-            <div style="max-width: 50%;">
+            <div class="about-me-info">
                 <h1>Hi, I'm <span>Oliver Kipkemei</span> a <span>Ethical Hacker</span></h1>
                 <p>
                     I'm a software developer and a student at Dedan kimathi university. I'm currently in my final year of study. I'm passionate about software development and I'm always looking for opportunities to learn and grow.
@@ -105,40 +106,27 @@
                 </div>
             </div>
         </section>
-        <!-- 
-        <h1 style="text-align: center;">Projects</h1>
-        <section class="projects">
-            <section class="project">
-                <h1>Revenue Collection</h1>
-                <div class="line"></div>
-                <p>I noticed my county government needed a platform where they can collect tax instead to going shop to shop every end month This helps and improve tax collection by local government through easy tracking avoid delays and penalties to shopkeepers 
-                </p>
-                <div class="learn-more">
-                    <a href="https://github.com/OliverMengich/revenue_app">Learn More</a>
-                </div>
-            </section>
-            <section class="project">
-                <h1>AgriBlock</h1>
-                <div class="line"></div>
-                
-                <p>Using Solidity, React, JavaScript and MongoDB, I developed a decentralized agricultural marketplace that connects buyers and sellers in a peer-peer network where buyers can buy agricultural products and sellers can market their goods. Payment is done in cryptos This helps remove chattels who act as middlemen thus saving money to sellers. Also helps farmers get 100% pay and prevents food from going bad                 </p>
-                <div class="learn-more">
-                    <a href="https://github.com/OliverMengich/decentralized_agriculture_marketplace">Learn More</a>
-                </div>
-            </section>
-        </section>
-        <h1 style="text-align: center;">Skills</h1>
-        -->
         <section class="contact"></section>
     </main>
     <footer>
         <p>Oliver Kipkemei &copy; 2021</p>
     </footer>
     <script>
+        let toogled = false;
         var skillTab= document.getElementById("skill-tab");
         var experienceTab= document.getElementById("experience-tab");
         var educationTab= document.getElementById("education-tab");
-
+        var hambuger = document.getElementById("hambuger");
+        hambuger.onclick = function(){
+            toogled =!toogled
+            console.log(toogled);
+            if(toogled===true){
+                document.querySelector(".toogle").style.display = "block";
+            }else{
+                document.querySelector(".toogle").style.display = "none";
+            }
+        }
+        
         skillTab.onclick = function(){
             console.log("you clicked me")
             document.querySelector(".skills").style.display = "block";
