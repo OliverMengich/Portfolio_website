@@ -48,6 +48,8 @@ a{
 }
 .hambuger{
     margin: 3vw;
+    font-size: 20px;
+    width: 10px;
     display: none;
     cursor: pointer;
 }
@@ -63,7 +65,10 @@ a{
 }
 .about-me img{
     border-collapse: collapse;
-    border-radius: 10%;
+    margin-top: 10px;
+    height: 30vw;
+    border-radius: 50%;
+    border: 10px solid red;
 }
 h1{
     /* font-size: 34px; */
@@ -76,8 +81,13 @@ h1{
     font-family: 'Fruktur', cursive;
     color: red;
 }
+.my-logo{
+    display: none;
+}
+
 .details{
     display: inline-flex;
+    position: relative;
     justify-content: space-between;
     transform: scale(1);
     border-radius: 14px;
@@ -86,6 +96,7 @@ h1{
     border: 5px solid black;
     margin-top: 5%;
 }
+
 .details .image{
     border-radius: 5px;
     padding: 2px;
@@ -112,12 +123,20 @@ h1{
     cursor: pointer;
 }
 .tabs-section h4:hover,
-.tabs-section h4.active{
+.tabs-section h4.active
+.tabs-section h4:focus{
     color: red;
 }
-.tab h5{ 
+.tab h5,
+.tab li{ 
     font-family: 'Fruktur', cursive; 
     color: rgb(199, 21, 199);
+}
+.tab ul{
+    list-style: decimal;
+}
+.tab li{
+    margin-top: 12px;
 }
 .tabs{
     display: flex;
@@ -148,6 +167,7 @@ p{
     font-family: 'Zen Kurenaido', sans-serif;
 }
 .projects{
+    position: relative;
     text-align: center;
 }
 .projects-container{
@@ -165,7 +185,6 @@ p{
 .project img{
     opacity: 1;
     display: block;
-    height: 50vh;
     width: 100%;
     transition: .5s ease;
     backface-visibility: hidden;
@@ -219,6 +238,32 @@ p{
     text-transform: uppercase;
     border-radius: 10px;
 }
+.contact{
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid red;
+}
+.contact .handles{
+    width: 100vw;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+}
+.handles > *{
+    padding: 5px 20px;
+    margin: 15px;
+    font-size: 25px;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+button{
+    background-color: red;
+}
+button a{
+    font-size: 20px;
+    
+}
 @media screen and (max-width:800px) {
     body{
         overflow-x: hidden;
@@ -228,27 +273,33 @@ p{
         margin: 0;
     }
     .details{
-        
         border: none;
         flex-direction: column;
         max-width: 100%;
+        margin-bottom: 10vh;
+    }
+    .my-logo{
+        cursor: pointer;
+        display: block;
+        border-bottom: 2px solid gray;
+    }
+    .my-logo img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
     }
     .info{
-        position: relative;
-        top: -130vw;
-        opacity: 1;
-        font-weight: bold;
-        width: 80%;
-        margin: 2%;
-        /* color: bl; */
-    }
-    .info h1{
-        color: red;
-    }
-    .info p{
-        font-size: 2.5vw;
+        position:absolute;
+        width: 100%;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
     }
     .details .image{
+        width: 90vw;
+        margin: 0;
+        padding: 0;
         opacity: 0.3;
         border: none;
     }
@@ -277,15 +328,18 @@ p{
         /* border-bottom: none; */
         width: 100vw;
     }
+    .description p{
+        font-size: 3vw;
+    }
     .header ul{
         position: absolute;
-        top: inherit;
+        top: 10;
         right: 0;
         margin: 0;
-        padding: 5vh;
-        width: 100vw;
+        transition: .5s;
+        padding-top: 5vh;
+        width: 80vw;
         height: 60%;
-        /* opacity: .9; */
         text-align: center;
         background-color: rgb(5, 18, 75);
         display: none;
@@ -296,11 +350,19 @@ p{
         margin: 10px;
         font-size: 30px;
     }
-    .header ul li{
-        margin-bottom: 10px;
-        color: rgb(168, 12, 147);
+    .tab ul,
+    .tab li{
+        font-size: 3vw;
     }
-    
+    .header ul li{
+        margin: 10px;
+        border-bottom: 2px solid gray;
+        border-width: 100%;
+        /* color: rgb(168, 12, 147); */
+    }
+    .header ul li:hover{
+        color: red;
+    }
     .info{
         max-width: 100%;
     }
