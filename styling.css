@@ -182,6 +182,11 @@ p{
     border: 2px solid white;
     border-radius: 5px;
 }
+.project:last-of-type,
+.project:first-of-type{
+    transform: perspective(200px) translateZ(-50px) ;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #000);
+}
 .project img{
     opacity: 1;
     display: block;
@@ -193,6 +198,8 @@ p{
     opacity: 0.3;
 }
 .project:hover .project-info {
+    width: 100%;
+    padding: 0 10px;
     font-size: 20px;
     opacity: 1;
 }
@@ -276,7 +283,6 @@ button a{
         border: none;
         flex-direction: column;
         max-width: 100%;
-        margin-bottom: 10vh;
     }
     .my-logo{
         cursor: pointer;
@@ -284,17 +290,21 @@ button a{
         border-bottom: 2px solid gray;
     }
     .my-logo img{
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height:250px;
         border-radius: 50%;
     }
     .info{
         position:absolute;
         width: 100%;
+        height: 100%;
         top:0;
         left:0;
         right:0;
         bottom:0;
+    }
+    .tab p{
+        font-size: 2vw;
     }
     .details .image{
         width: 90vw;
@@ -304,9 +314,13 @@ button a{
         border: none;
     }
     .projects-container{
-        flex-direction: column;
+        /* flex-direction: column; */
         margin: 10px;
     }
+    /* .projects{
+        position: relative;
+        top: 0px;
+    } */
     .projects-container .project{
         width: 80%;
     }
@@ -327,9 +341,6 @@ button a{
         align-items: flex-start;
         /* border-bottom: none; */
         width: 100vw;
-    }
-    .description p{
-        font-size: 3vw;
     }
     .header ul{
         position: absolute;
