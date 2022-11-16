@@ -30,16 +30,13 @@
         <section class="about-me">
             <img src="images/square_img.jpg" alt="">
             <div class="about-me-info">
-                <h1>Hi, I'm <span>Oliver Kipkemei</span> a <span>Web Developer</span></h1>
+                <h1>Hi, I'm <span>Oliver Kipkemei</span> a <span>Backend Developer</span></h1>
                 <p>
                     I'm a software developer and a student at Dedan kimathi university. I'm currently in my final year of study. I'm passionate about software development and I'm always looking for opportunities to learn and grow.
                 </p>
             </div>
         </section>
         <div class="details">
-            <div class="image">
-                <img src="images/removed_bg1.png" alt="">
-            </div>
             <div class="info">
                 <h1 style="text-align: center;">About Me</h1>
                 <p>I am a self-motivated, hardworking and a team player. I am also a fast learner and I am always willing to learn new things. I am a good listener and I am always ready to take constructive criticism. I am also a good communicator and I am always ready to work with people from different backgrounds.</p>
@@ -73,7 +70,7 @@
                                 <p style=" color: white; margin: 0; padding: 0;">Managing Software Versions using git</p>
                                 <div class="line"></div>
                             </li>
-                            <li>Databases (Relations, Document,Redis and Firebase)
+                            <li>Databases (Relations, Document,Redis)
                                 <p style=" color: white; margin: 0; padding: 0;">Working with all types of Databases</p>
                                 <div class="line"></div>
                             </li>
@@ -99,19 +96,19 @@
                 </div>
             </div>
         </div>
+        <section class="blogs">
+            <h1>Blogs</h1>
+        </section>
         <section class="projects">
             <h1>Projects</h1>
             <div class="projects-container">
+                <button style="font-size: inherit" id="moveleft">&#60;</button>
                 <div class="project">
                     <img src="images/farm.jpg" alt="">
                     <div class="project-info">
                         <div class="text">
                             <h1>AgriBlock</h1>
-                            <p>Using Solidity, React, JavaScript and MongoDB, I developed a decentralized agricultural marketplace that 
-                                connects buyers and sellers in a peer-peer network 
-                                where buyers can buy agricultural products and sellers can market their goods.
-                                Payment is done in cryptos This helps remove chattels who act as middlemen thus saving money to sellers. 
-                            </p>
+                            <p> App Leveraging Blockchain to solve Agricultural problem</p>
                             <button class="btn">
                                 <a href="https://github.com/OliverMengich/decentralized_agriculture_marketplace">Learn More</a>
                             </button>
@@ -123,7 +120,7 @@
                     <div class="project-info">
                         <div class="text">
                             <h1>Revenue Collection App</h1>
-                            <p>I noticed my county government needed a platform where they can collect tax instead to going shop to shop every end month This helps and improve tax collection by local government through easy tracking avoid delays and penalties to shopkeepers</p>
+                            <p>App for tracking revenue payment by small businesses</p>
                             <button class="btn">
                                 <a href="https://github.com/OliverMengich/revenue_app">Learn More</a>
                             </button>
@@ -135,13 +132,14 @@
                     <div class="project-info">
                         <div class="text">
                             <h1>Auction App</h1>
-                            <p>An auction Application that delivers real time data on auction and bidding using React, NodeJS, WebSockets</p>
+                            <p>An Auction Application that delivers real time data on auction and bidding using React, NodeJS, WebSockets</p>
                             <button class="btn">
                                 <a href="https://github.com/OliverMengich/revenue_app">Learn More</a>
                             </button>
                         </div>
                     </div>
                 </div>
+                <button id="moveright">&#62;</button>
             </div>
         </section>
         <section class="contact">
@@ -161,6 +159,21 @@
         <p>Oliver Kipkemei &copy; 2021</p>
     </footer>
     <script>
+        // use element.parentNode to set div as first child
+        var mvright = document.getElementById("moveright");
+        var mvleft = document.getElementById("moveleft");
+        var projects = document.querySelector(".projects-container");
+        var project = document.querySelectorAll(".project");
+        let counter = project.length;
+        console.log(project[0]);
+        mvright.addEventListener("click", function () {
+            projects.insertBefore(project[project.length - 1], project[0]);
+            project = document.querySelectorAll(".project");
+        });
+        mvleft.addEventListener("click", function () {
+            projects.insertBefore(project[0], project[project.length - 1]);
+            project = document.querySelectorAll(".project");
+        });
         let toogled = false;
         var skillTab= document.getElementById("skill-tab");
         var experienceTab= document.getElementById("experience-tab");
