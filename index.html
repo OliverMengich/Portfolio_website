@@ -30,7 +30,7 @@
         <section class="about-me">
             <img src="images/square_img.jpg" alt="">
             <div class="about-me-info">
-                <h1>Hi, I'm <span>Oliver Kipkemei</span> a <span>Backend Developer</span></h1>
+                <h1 >Hi, I'm <span>Oliver Kipkemei</span> a <h1 class="typewriter">Backend Developer</h1></h1>
                 <p>
                     I'm a software developer and a student at Dedan kimathi university. I'm currently in my final year of study. I'm passionate about software development and I'm always looking for opportunities to learn and grow.
                 </p>
@@ -98,11 +98,31 @@
         </div>
         <section class="blogs">
             <h1>Blogs</h1>
+            <div class="blogs-container">
+                <button class="scroller" id="moveleft">&#60;</button>
+                <div class="blog">
+                    <img src="images/api.webp" alt="api_security" srcset="">
+                    <p>Complexity in every application is the worst enemy of Security. As the complexity of APIs continue to increase learn how you can secure your APIs</p>
+                    <a href="http://medium.com/@oliverkemei2000/common-api-vulnerabilities-c7474dd1e5a5">Learn More</a>
+                </div>
+                <div class="blog">
+                    <img src="images/AzureCloud_1_5.jpg" alt="azure_mern" srcset="">
+                    <p>Learn how you can deploy a NodeJS Backend Application to Microsoft Azure Using Azure DevOps Creating CI/CD pipelines and using Triggers</p>
+                    <a href="http://">Learn More</a>
+                </div>
+                <div class="blog">
+                    <img src="images/AzureCloud_1_5.jpg" alt="azure_mern" srcset="">
+                    <p>Learn how you can deploy a NodeJS Backend Application to Microsoft Azure Using Azure DevOps Creating CI/CD
+                        pipelines and using Triggers</p>
+                    <a href="http://">Learn More</a>
+                </div>
+                <button class="scroller" id="moveright">&#62;</button>
+            </div>
         </section>
         <section class="projects">
             <h1>Projects</h1>
             <div class="projects-container">
-                <button style="font-size: inherit" id="moveleft">&#60;</button>
+                <button class="scroller" id="moveleft">&#60;</button>
                 <div class="project">
                     <img src="images/farm.jpg" alt="">
                     <div class="project-info">
@@ -139,7 +159,7 @@
                         </div>
                     </div>
                 </div>
-                <button id="moveright">&#62;</button>
+                <button class="scroller" id="moveright">&#62;</button>
             </div>
         </section>
         <section class="contact">
