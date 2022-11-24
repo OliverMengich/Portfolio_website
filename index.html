@@ -70,7 +70,7 @@
                                 <p style=" color: white; margin: 0; padding: 0;">Managing Software Versions using git</p>
                                 <div class="line"></div>
                             </li>
-                            <li>Databases (Relations, Document,Redis)
+                            <li>Databases (Relational, Document)
                                 <p style=" color: white; margin: 0; padding: 0;">Working with all types of Databases</p>
                                 <div class="line"></div>
                             </li>
@@ -111,10 +111,9 @@
                     <a href="https://medium.com/@oliverkemei2000/primitive-vs-reference-datatypes-in-javascript-b00ffc5bad31">Learn More</a>
                 </div>
                 <div class="blog">
-                    <img src="images/AzureCloud_1_5.jpg" alt="azure_mern" srcset="">
-                    <p>Learn how you can deploy a NodeJS Backend Application to Microsoft Azure Using Azure DevOps Creating CI/CD
-                        pipelines and using Triggers</p>
-                    <a href="http://">Learn More</a>
+                    <img src="images/metamask-fox-logo.png" alt="metamask-fox-logo" srcset="">
+                    <p>Learn how you can integrate authentification and Authorization with Metamask on your application. Whether it be a DApp or any other Application...</p>
+                    <a href="https://medium.com/@oliverkemei2000/implementing-login-with-metamask-send-ether-user-registration-using-react-nodejs-sequelize-and-73d8d7256198">Learn More</a>
                 </div>
                 <button class="scroller">&#62;</button>
             </div>
@@ -179,7 +178,18 @@
         <p>Oliver Kipkemei &copy; 2021</p>
     </footer>
     <script>
-        
+        var text = document.querySelector(".typewriter");
+        var descriptions = ['Backend Developer', 'Frontend Developer', 'Fullstack Developer', 'Web3 Developer',"DevOps Entusiast"];
+        var i = 1;
+        text.innerHTML = descriptions[0];
+        text.addEventListener("animationiteration", (ev) => {
+                // console.log(ev);
+            text.innerHTML = descriptions[i];
+            i++;
+            if (i == descriptions.length) {
+                i = 0;
+            }
+        });
         // use element.parentNode to set div as first child
         var mvright = document.getElementById("moveright");
         var mvleft = document.getElementById("moveleft");
